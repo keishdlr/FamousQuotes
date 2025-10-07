@@ -27,12 +27,26 @@ public class FamousQuotes {
             // this will work.  Otherwise, the index
             // will be out of range.
             System.out.println(quotes[index]);
+
+            //Add a loop to the program asks the user if they want to see another
+            //saying.  If they say yes, repeat the process.  DO NOT shut the application down
+            //when if an exception occurs.  Just pick up with the next iteration.
+
+            System.out.println("Do you want to see another quote? Y / N");
+            boolean keepGoing = true;
+            keepGoing = scanner.nextBoolean();
+            while (keepGoing = true){
+                System.out.print("Pick a another quote (select #1 - #10): ");
+                int index = scanner.nextInt();
+                index--;   // change number from range 1-10 to range 0-9 because index starts with 0
+                // As long as the user entered a number in the range
+                // this will work.  Otherwise, the index
+                // will be out of range.
+                System.out.println(quotes[index]);
         }
         catch (Exception e) {
             System.out.println("Your number was out of range!");
             e.printStackTrace();
-        }
+        }}
         scanner.close();
-    }
-
-}
+    }}
