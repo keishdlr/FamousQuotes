@@ -20,13 +20,13 @@ public class FamousQuotes {
                     "You miss 100% of the shots you don’t take.",
                     "Start where you are. Use what you have. Do what you can."
             };
-            System.out.print("Pick a quote (select #1 - #6): ");
+            System.out.print("Pick a quote (select #1 - #10): ");
             int index = scanner.nextInt();
-            index--;   // change number from range 1-6 to range 0-5
-            // as long as the user entered a number in the range
-            // of 1 to 6, this will work.  Otherwise the index
+            index--;   // change number from range 1-10 to range 0-9 because index starts with 0
+            // As long as the user entered a number in the range
+            // this will work.  Otherwise, the index
             // will be out of range.
-            System.out.println(names[index]);
+            System.out.println(quotes[index]);
         }
         catch (Exception e) {
             System.out.println("Your number was out of range!");
